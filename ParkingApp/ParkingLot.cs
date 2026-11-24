@@ -105,7 +105,7 @@ namespace ParkingApp
 
         public int CalculateFee(int minutes)
         {
-            int hours = minutes / 60;
+            int hours = (minutes + 59) / 60;
             return hours * hourlyRate;
         }
     }
