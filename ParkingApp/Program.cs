@@ -59,8 +59,10 @@ namespace ParkingApp
             string plate = Console.ReadLine();
             Console.Write("Enter the owner name: ");
             string owner = Console.ReadLine();
+            Console.Write("Enter the car's color: ");
+            string color = Console.ReadLine();
 
-            int spotNumber = lot.ParkCar(plate, owner);
+            int spotNumber = lot.ParkCar(plate, owner ,color);
 
             if (spotNumber == -1)
             {
@@ -85,7 +87,7 @@ namespace ParkingApp
             }
             else
             {
-                Console.WriteLine("Car found in spot " + spotNumber + ", owner: " + lot.GetCar(spotNumber).GetOwner());
+                Console.WriteLine("Car found in spot " + spotNumber + ", owner: " + lot.GetCar(spotNumber).GetOwner() + ", color: " + lot.GetCar(spotNumber).GetColor());
             }
         }
 

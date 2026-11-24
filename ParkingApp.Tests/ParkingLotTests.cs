@@ -22,9 +22,9 @@ public class ParkingLotTests
     public void ParkCar_UsesTheLastFreeSpot()
     {
         var lot = new ParkingLot();
-        lot.ParkCar("11-111-11", "Lior");
+        lot.ParkCar("11-111-11", "Lior" ,"Red" );
 
-        var result = lot.ParkCar("22-222-22", "Tal");
+        var result = lot.ParkCar("22-222-22", "Tal" , "Blue");
 
         Assert.Equal(5, result);
     }
