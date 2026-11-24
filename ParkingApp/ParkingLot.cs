@@ -90,7 +90,7 @@ namespace ParkingApp
         {
             int index = spotNumber - 1;
 
-            if (index < 0 || index >= spots.Length)
+            if (index < 0 || index >= spots.Length || spots[index] == null)
             {
                 return -1;
             }

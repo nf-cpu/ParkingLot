@@ -43,4 +43,14 @@ public class ParkingLotTests
 
         Assert.Equal(expected, result);
     }
+
+    [Fact]
+    public void RemoveCar_ReturnsMinusOne_WhenSpotIsEmpty()
+    {
+        var lot = new ParkingLot();
+
+        var result = lot.RemoveCar(3, 60);
+
+        Assert.Equal(-1, result);
+    }
 }
