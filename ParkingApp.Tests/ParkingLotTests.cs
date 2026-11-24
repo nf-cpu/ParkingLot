@@ -17,4 +17,14 @@ public class ParkingLotTests
 
         Assert.Equal(2, result);
     }
+    [Fact]
+    public void ParkCar_UsesTheLastFreeSpot()
+    {
+        var lot = new ParkingLot();
+        lot.ParkCar("11-111-11", "Lior");
+
+        var result = lot.ParkCar("22-222-22", "Tal");
+
+        Assert.Equal(5, result);
+    }
 }
