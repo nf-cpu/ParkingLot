@@ -9,9 +9,9 @@ namespace ParkingApp
 
         public ParkingLot()
         {
-            spots[0] = new Car("12-345-67", "Dana");
-            spots[1] = new Car("23-456-78", "Noa");
-            spots[3] = new Car("34-567-89", "Maya");
+            spots[0] = new Car("12-345-67", "Dana","red");
+            spots[1] = new Car("23-456-78", "Noa","blue");
+            spots[3] = new Car("34-567-89", "Maya","gray");
         }
 
         public void DisplaySpots()
@@ -57,13 +57,13 @@ namespace ParkingApp
         }
 
         // Returns the spot number, or -1 when the lot is full.
-        public int ParkCar(string plate, string owner)
+        public int ParkCar(string plate, string owner,string color)
         {
             for (int index = 0; index < spots.Length; index++)
             {
                 if (spots[index] == null)
                 {
-                    spots[index] = new Car(plate, owner);
+                    spots[index] = new Car(plate, owner,color);
                     return index + 1;
                 }
             }
@@ -94,7 +94,10 @@ namespace ParkingApp
             {
                 return -1;
             }
-
+            if (spots[index] == null)
+            {
+                return -1;
+            }
             Car car = spots[index];
             Console.WriteLine("Car " + car.GetPlate() + " is leaving spot " + spotNumber + ".");
 
@@ -105,8 +108,8 @@ namespace ParkingApp
 
         public int CalculateFee(int minutes)
         {
-            int hours = minutes / 60;
-            return hours * hourlyRate;
+            double hours = Math.Ceiling((double)minutes / 60);
+            return (int)(hours * hourlyRate);
         }
     }
 }
