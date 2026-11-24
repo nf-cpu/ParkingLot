@@ -59,8 +59,10 @@ namespace ParkingApp
             string plate = Console.ReadLine();
             Console.Write("Enter the owner name: ");
             string owner = Console.ReadLine();
+            Console.Write("Enter the color name: ");
+            string color = Console.ReadLine();
 
-            int spotNumber = lot.ParkCar(plate, owner);
+            int spotNumber = lot.ParkCar(plate, owner, color);
 
             if (spotNumber == -1)
             {
