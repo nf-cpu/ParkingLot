@@ -41,5 +41,31 @@ namespace ParkingApp.Tests
 
             Assert.Equal(expected, result);
         }
+        [Fact]
+        public void RemoveCar_ReturnsMinusOne_WhenSpotIsEmpty()
+        {
+            var lot = new ParkingLot();
+
+            var result = lot.RemoveCar(3, 60);
+
+            Assert.Equal(-1, result);
+        }
+        [Fact]
+        public void RemoveCar_FreeUpSpot_ReturnsNull()
+        {
+            var lot = new ParkingLot();
+            // עדכון הבנאי עם מספר רישוי ובעלים
+            var car = new Car("123-45-678", "OwnerName");
+
+            // החניית רכב במקום מספר 1
+            lot.ParkCar("123-45-678", "OwnerName");
+
+            // הוצאת הרכב מהחנייה
+            lot.RemoveCar(1, 60);
+
+            // בדיקה שהמקום אכן התפנה והחזיר null
+            var spotCar = lot.GetCar(1);
+            Assert.Null(spotCar);
+        }
     }
 }

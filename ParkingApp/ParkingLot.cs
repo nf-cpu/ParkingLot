@@ -94,7 +94,10 @@ namespace ParkingApp
             {
                 return -1;
             }
-
+            if (spots[index] == null)
+            {
+                return -1;
+            }
             Car car = spots[index];
             Console.WriteLine("Car " + car.GetPlate() + " is leaving spot " + spotNumber + ".");
 
