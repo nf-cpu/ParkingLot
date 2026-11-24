@@ -96,7 +96,7 @@ namespace ParkingApp
             Console.Write("Enter the parking time in minutes: ");
             int minutes = Convert.ToInt32(Console.ReadLine());
 
-            int fee = lot.RemoveCar(spotNumber, minutes);
+            double fee = lot.RemoveCar(spotNumber, minutes);
 
             if (fee == -1)
             {
