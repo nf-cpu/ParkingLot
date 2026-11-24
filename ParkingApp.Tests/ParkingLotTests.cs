@@ -21,9 +21,9 @@ namespace ParkingApp.Tests
         public void ParkCar_UsesTheLastFreeSpot()
         {
             var lot = new ParkingLot();
-            lot.ParkCar("11-111-11", "Lior");
+            lot.ParkCar("11-111-11", "Lior", "red");
 
-            var result = lot.ParkCar("22-222-22", "Tal");
+            var result = lot.ParkCar("22-222-22", "Tal", "red");
 
             Assert.Equal(5, result);
         }
@@ -55,10 +55,10 @@ namespace ParkingApp.Tests
         {
             var lot = new ParkingLot();
             // עדכון הבנאי עם מספר רישוי ובעלים
-            var car = new Car("123-45-678", "OwnerName");
+            var car = new Car("123-45-678", "OwnerName", "red");
 
             // החניית רכב במקום מספר 1
-            lot.ParkCar("123-45-678", "OwnerName");
+            lot.ParkCar("123-45-678", "OwnerName", "red");
 
             // הוצאת הרכב מהחנייה
             lot.RemoveCar(1, 60);
