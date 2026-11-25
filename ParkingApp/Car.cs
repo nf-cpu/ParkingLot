@@ -4,11 +4,13 @@ namespace ParkingApp
     {
         private string plate;
         private string owner;
+        private string color;
 
-        public Car(string plate, string owner)
+        public Car(string plate, string owner,string color )
         {
             this.plate = plate;
             this.owner = owner;
+            this.color = color;
         }
 
         public string GetPlate()
@@ -19,6 +21,15 @@ namespace ParkingApp
         public void SetPlate(string plate)
         {
             this.plate = plate;
+        }
+        public string GetColor()
+        {
+            return color;
+        }
+
+        public void SetColor(string plate)
+        {
+            this.color = color;
         }
 
         public string GetOwner()
