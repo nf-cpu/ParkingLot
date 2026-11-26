@@ -41,5 +41,22 @@ namespace ParkingApp.Tests
 
             Assert.Equal(expected, result);
         }
+        [Fact]
+        public void RemoveCar_ReturnsMinusOne_WhenSpotIsEmpty()
+        {
+            var lot = new ParkingLot();
+
+            var result = lot.RemoveCar(3, 60);
+
+            Assert.Equal(-1, result);
+        }
+        [Fact]
+        public void RemoveCar_ReturnsNull_WhenPlaceIsEmpty()
+        {
+            var lot = new ParkingLot();
+            lot.RemoveCar(1, 60);
+            var result = lot.GetCar(1);
+            Assert.Null(result);
+        }
     }
 }
