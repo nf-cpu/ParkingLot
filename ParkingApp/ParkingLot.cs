@@ -105,7 +105,7 @@ namespace ParkingApp
 
         public int CalculateFee(int minutes)
         {
-            int hours = minutes / 60;
+            int hours = (int)Math.Ceiling(minutes / 60.0);
             return hours * hourlyRate;
         }
     }

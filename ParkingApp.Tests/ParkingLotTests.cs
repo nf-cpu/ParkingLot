@@ -27,5 +27,19 @@ namespace ParkingApp.Tests
 
             Assert.Equal(5, result);
         }
+        [Theory]
+        [InlineData(30, 10)]
+        [InlineData(60, 10)]
+        [InlineData(61, 20)]
+        [InlineData(90, 20)]
+        [InlineData(120, 20)]
+        public void CalculateFee_ChargesEveryStartedHour(int minutes, int expected)
+        {
+            var lot = new ParkingLot();
+
+            var result = lot.CalculateFee(minutes);
+
+            Assert.Equal(expected, result);
+        }
     }
 }
