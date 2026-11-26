@@ -59,7 +59,7 @@ namespace ParkingApp
         // Returns the spot number, or -1 when the lot is full.
         public int ParkCar(string plate, string owner)
         {
-            for (int index = 0; index < spots.Length - 1; index++)
+            for (int index = 0; index < spots.Length ; index++)
             {
                 if (spots[index] == null)
                 {
@@ -94,10 +94,12 @@ namespace ParkingApp
             {
                 return -1;
             }
-
+            if (spots[index] == null)
+            {
+                return -1;
+            }
             Car car = spots[index];
             Console.WriteLine("Car " + car.GetPlate() + " is leaving spot " + spotNumber + ".");
-
             int fee = CalculateFee(minutes);
             spots[index] = null;
             return fee;
@@ -105,7 +107,7 @@ namespace ParkingApp
 
         public int CalculateFee(int minutes)
         {
-            int hours = minutes / 60;
+            int hours = (int)Math.Ceiling(minutes / 60.0);
             return hours * hourlyRate;
         }
     }
