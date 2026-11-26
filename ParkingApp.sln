@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingApp", "ParkingApp\ParkingApp.csproj", "{E358F344-9D1C-429C-A141-FB6645384963}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingApp.Tests", "ParkingApp.Tests\ParkingApp.Tests.csproj", "{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +29,23 @@ Global
 		{E358F344-9D1C-429C-A141-FB6645384963}.Release|x64.Build.0 = Release|Any CPU
 		{E358F344-9D1C-429C-A141-FB6645384963}.Release|x86.ActiveCfg = Release|Any CPU
 		{E358F344-9D1C-429C-A141-FB6645384963}.Release|x86.Build.0 = Release|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Debug|x64.Build.0 = Debug|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Debug|x86.Build.0 = Debug|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Release|x64.ActiveCfg = Release|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Release|x64.Build.0 = Release|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Release|x86.ActiveCfg = Release|Any CPU
+		{D48C10EE-7E44-4BC8-A6F3-90527E8CB83D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FB4A305-A88B-404C-9492-FE5DE6C11CD0}
 	EndGlobalSection
 EndGlobal
